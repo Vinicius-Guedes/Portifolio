@@ -17,7 +17,14 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+
+          if [ -z "${{ secrets.SSH_HOST }}" ]; then
+            echo "SSH_HOST está vazio"
+            exit 1
+          fi
+
           ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+
 
       - name: Sincronizar arquivos com o servidor
         run: |
