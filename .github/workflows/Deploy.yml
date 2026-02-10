@@ -15,9 +15,9 @@ jobs:
       - name: Configurar SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Sincronizar arquivos com o servidor
         run: |
@@ -25,12 +25,13 @@ jobs:
             --exclude=".git" \
             --exclude=".github" \
             ./ \
-            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/opt/apps/viniciusguedes
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/opt/apps/viniciusguedes
 
       - name: Subir containers com Docker Compose
         run: |
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
-            cd /opt/apps/viniciusguedes
-            docker compose pull
-            docker compose up -d
+          ssh -o StrictHostKeyChecking=no \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+              cd /opt/apps/viniciusguedes
+              docker compose pull
+              docker compose up -d
           EOF
