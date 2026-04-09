@@ -239,7 +239,7 @@ body nav#navigation .social-links li:nth-child(4) svg:hover path:nth-child(2) {
 
 #contact li path,
 #navigation button.open-menu path[stroke*="#00856F"] {
-  stroke: var(--primary-color);
+  stroke: var(--paragraph-2);
 }
 
 #navigation.scroll button.open-menu path[stroke*="#00856F"] {
@@ -456,7 +456,7 @@ body.menu-expanded button path {
     width: 0;
   }
   to {
-    width: 27.5rem;
+    width: 22.5rem;
   }
 }
 
@@ -1106,9 +1106,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   }
 
   nav#navigation .menu ul li a {
-    color: var(--primary-color);
     opacity: 0.7;
-
     transition: opacity 0.4s;
   }
 
@@ -1117,13 +1115,11 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   }
 
   nav#navigation.scroll .menu ul li a {
-    color: var(--paragraph-2);
     opacity: 0.6;
   }
 
   nav#navigation .menu ul:nth-child(1) li {
     width: 8.4rem;
-    color: var(--paragraph);
   }
 
   nav#navigation .menu ul:nth-child(1) li:nth-child(3),
@@ -1146,7 +1142,6 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--primary-color);
 
     display: block;
 
@@ -1180,15 +1175,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
     gap: 1.5rem;
   }
 
-  nav#navigation .social-links li:nth-child(1) svg path {
-    stroke: var(--primary-color);
-  }
 
-  nav#navigation .social-links li:nth-child(2) svg path:nth-child(2),
-  nav#navigation .social-links li:nth-child(3) svg path:nth-child(2),
-  nav#navigation .social-links li:nth-child(4) svg path:nth-child(2) {
-    fill: var(--primary-color);
-  }
 
   nav#navigation.scroll .social-links li:nth-child(1) svg path {
     stroke: var(--paragraph-2);
@@ -1290,7 +1277,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
       width: 0;
     }
     to {
-      width: 38rem;
+      width: 32rem;
     }
   }
 
