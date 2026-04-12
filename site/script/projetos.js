@@ -18,7 +18,7 @@ const projetos = [
     tecnologias: "HTML - CSS - TYPESCRIPT - REACT - .NET - SQL Server - Docker",
     links: {
       github: "https://github.com/Vinicius-Guedes/Maxiprod",
-      demo: "https://fernandopessotto.viniciusguedes.cloud"
+      demo: "https://maxiprod.viniciusguedes.cloud"
     }
   },
 ];
