@@ -21,4 +21,15 @@ const projetos = [
       demo: "https://maxiprod.viniciusguedes.cloud"
     }
   },
+  {
+    titulo: "Aula - Pizzaria",
+    imagem: "./lib/images/projects/pizzaria.gif",
+    alt: "GIF do projeto Pizzaria.",
+    descricao: "Site Desenvolvido para aula de Programação do Luiz Rosa",
+    tecnologias: "HTML - CSS - JQUERY - BOOTSTRAP - .NET - SQL Server - Docker",
+    links: {
+      github: "https://github.com/LuizRosa-Aulas/Pizzaria.UI",
+      demo: "https://pizzaria.viniciusguedes.cloud"
+    }
+  },
 ];
