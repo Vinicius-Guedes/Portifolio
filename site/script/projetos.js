@@ -32,4 +32,14 @@ const projetos = [
       demo: "https://pizzaria.viniciusguedes.cloud"
     }
   },
+  {
+    titulo: "Site Isabela Marques",
+    imagem: "./lib/images/projects/isabelamarquespsi.gif",
+    alt: "GIF do projeto Isabela Marques.",
+    descricao: "Site Desenvolvido para a Psicóloga Isabela Marques",
+    tecnologias: "HTML - CSS - JS - Docker",
+    links: {
+      projeto: "https://isabelamarquespsi.com.br"
+    }
+  },
 ];
