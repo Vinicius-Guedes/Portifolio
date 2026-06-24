@@ -42,4 +42,14 @@ const projetos = [
       projeto: "https://isabelamarquespsi.com.br"
     }
   },
+  {
+    titulo: "Monitoramento Servidor",
+    imagem: "./lib/images/projects/monitoramento.png",
+    alt: "IMG do projeto Monitoramento.",
+    descricao: "Site Desenvolvido para Monitoramento do Servidor",
+    tecnologias: "HTML - CSS - JS - NODE",
+    links: {
+      projeto: "https://monitoramento.viniciusguedes.cloud"
+    }
+  },
 ];
