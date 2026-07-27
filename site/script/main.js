@@ -91,27 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = document.createElement("div");
     card.className = "project-card";
 
-    const techTags = p.tecnologias
-      .split(" - ")
-      .map((t) => `<span>${t.trim()}</span>`)
-      .join("");
+    const techTags = p.tecnologias.split(" - ").map((t) => `<span>${t.trim()}</span>`).join("");
+
+    const isVideo = p.imagem.toLowerCase().split("?")[0].endsWith(".mp4");
+    const media = isVideo ? `<video src="${p.imagem}" autoplay loop muted playsinline preload="metadata"></video>` : `<img src="${p.imagem}" alt="${p.alt}" loading="lazy">`;
 
     card.innerHTML = `
       <div class="card-image">
-        <img src="${p.imagem}" alt="${p.alt}" loading="lazy">
+        ${media}
         <div class="card-overlay">
-          ${p.links.projeto ? `
-            <a href="${p.links.projeto}" target="_blank" title="Ver Projeto">
-              ${iconeStar()}
-            </a>` : ""}
-          ${p.links.demo ? `
-            <a href="${p.links.demo}" target="_blank" title="Ver Demo">
-              ${iconeEye()}
-            </a>` : ""}
-          ${p.links.github ? `
-            <a href="${p.links.github}" target="_blank" title="Ver Código">
-              ${iconeGithub()}
-            </a>` : ""}
+          ${p.links.projeto ? `<a href="${p.links.projeto}" target="_blank" title="Ver Projeto">${iconeStar()}</a>` : ""}
+          ${p.links.demo ? `<a href="${p.links.demo}" target="_blank" title="Ver Demo">${iconeEye()}</a>` : ""}
+          ${p.links.github ? `<a href="${p.links.github}" target="_blank" title="Ver Código">${iconeGithub()}</a>` : ""}
         </div>
       </div>
       <div class="card-body">
