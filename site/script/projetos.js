@@ -57,7 +57,7 @@ const projetos = [
     titulo: "Mangiare Rosticceria",
     imagem: "./lib/images/projects/mangiarerosticceria.mp4",
     alt: "VIDEO do projeto Mangiare Rosticceria.",
-    descricao: "Site Desenvolvido para Monitoramento do Servidor",
+    descricao: "Site Desenvolvido para a Mangiare Rosticceria",
     tecnologias: "HTML - CSS - JS",
     links: {
       projeto: "https://mangiarerosticceria.com.br"

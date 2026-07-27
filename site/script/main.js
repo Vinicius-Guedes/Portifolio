@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const techTags = p.tecnologias.split(" - ").map((t) => `<span>${t.trim()}</span>`).join("");
 
     const isVideo = p.imagem.toLowerCase().split("?")[0].endsWith(".mp4");
-    const media = isVideo ? `<video src="${p.imagem}" autoplay loop muted playsinline preload="metadata"></video>` : `<img src="${p.imagem}" alt="${p.alt}" loading="lazy">`;
+    const media = isVideo ? `<video src="${p.imagem}" aria-label="${p.alt}" autoplay loop muted playsinline preload="metadata"></video>` : `<img src="${p.imagem}" alt="${p.alt}" loading="lazy">`;
 
     card.innerHTML = `
       <div class="card-image">
